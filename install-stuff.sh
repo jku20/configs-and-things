@@ -1,6 +1,7 @@
 #!/bin/bash
 # Copy files in first while we are still in the dir
 cp -r helix $HOME/.config
+cp .tmux.conf $HOME
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
