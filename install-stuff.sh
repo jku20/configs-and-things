@@ -1,7 +1,11 @@
 #!/bin/bash
 # Copy files in first while we are still in the dir
 cp -r helix $HOME/.config
+cp -r z $HOME/src
 cp .tmux.conf $HOME
+
+# install z
+echo '. $HOME/src/z/z.sh' >> $HOME/.bashrc
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -19,3 +23,4 @@ cargo install \
    --path helix-term \
    --locked
 echo 'export HELIX_RUNTIME=~/src/helix/runtime' >> $HOME/.bashrc
+echo 'export EDITOR=$HOME/.cargo/bin/hx' >> $HOME/.bashrc
